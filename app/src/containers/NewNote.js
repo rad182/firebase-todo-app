@@ -47,7 +47,8 @@ export default class NewNote extends Component {
         .database()
         .ref(`notes/${userId}`)
         .push({
-          content: this.state.content
+          content: this.state.content,
+          createdAt: Date()
         });
       this.props.history.push('/');
     } catch (e) {
