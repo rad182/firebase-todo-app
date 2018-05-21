@@ -1,0 +1,12 @@
+{
+  "name": "firebase-todo-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rad182/firebase-todo-app.git",
+  "author": "Royce Dy <rady182@me.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy:app": "cd app; yarn deploy",
+    "deploy:func": "cd functions; yarn deploy"
+  }
+}
