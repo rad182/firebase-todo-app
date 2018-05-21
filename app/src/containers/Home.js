@@ -24,7 +24,6 @@ export default class Home extends Component {
         .database()
         .ref(`notes/${userId}`)
         .on('value', snapshot => {
-          console.log('snapshot:', snapshot.val());
           const notes = [];
           snapshot.forEach(childSnapshot => {
             notes.push({
@@ -32,7 +31,7 @@ export default class Home extends Component {
               ...childSnapshot.val()
             });
           });
-          console.log('notes:', notes);
+
           this.setState({
             notes
           });
